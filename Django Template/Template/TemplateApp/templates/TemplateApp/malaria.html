@@ -1,0 +1,56 @@
+{% extends "TemplateApp/base.html" %}
+{% block body_block %}
+{% load static %}
+
+<!-- <section class="" style="margin-top: 15em;">
+    <div class="container">
+        <div class="row">
+          <p>Malaria is a contagious disease that is known of causing more than 400,000 deaths per year. </p>
+          <br>
+          <p>It is truly prevalent in some areas of the world, which implies that the disease is consistently found in those regions. In the other regions of the world, malaria is epidemic. Yet in other areas of the world malaria is seldom, if ever, found at all. There are numerous factors that make a region prone to an infectious disease outbreak.</p>
+          <form method = "post" enctype="multipart/form-data">
+              {% csrf_token %}
+              {{ form.as_p }}
+              <button type="submit" class="btn btn-success">Upload</button>
+            </form>
+            <br>
+            <br>
+            <div class="container img-cont">
+              {% if image_path %}
+                <img src="media/images/{{ image_path }}" alt="{{image_path}}" class="img-responsive" style="width: 10%; float: left; margin-right: 10px;" />
+                <p>person is {{ label }}</p>
+              {% endif %}
+
+            </div>
+        </div>
+    </div>
+</section> -->
+
+<!-- Upload -->
+<section>
+      <div class="row" style="background-Color: #41464b; text-color: white !important;  padding-top: 30px;  border-top: 5px solid rgba(0, 0, 0, 0.1); padding-top: 20%;">
+        <div class="container">
+        <p class="text-wht">Info & Stuff about Malaria. </p>
+        <form method = "post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-success">Upload</button>
+          </form>
+          <br>
+          <br>
+          <div class="container img-cont">
+            {% if image_path %}
+              <img src="media/images/{{ image_path }}" alt="{{image_path}}" class="img-responsive" style="width: 10%; float: left; margin-right: 10px;" />
+              <p>person is {{ label }}</p>
+            {% endif %}
+            <br>
+          </div>
+      </div>
+  </div>
+</section>
+
+<script src="{% static 'TemplateApp/js/jquery/jquery.js' %}"></script>
+
+<script type="text/javascript" src="{% static 'TemplateApp/js/custom.js' %}"></script>
+
+{% endblock %}

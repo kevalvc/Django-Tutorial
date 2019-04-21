@@ -1,0 +1,27 @@
+{% extends "DiseaseDetectionApp/base.html" %}
+{% block body_block %}
+{% load static %}
+
+<script type="text/javascript" src="{% static 'TemplateApp/js/custom.js' %}"></script>
+
+<section id="home">
+    <!-- <div id="" class=""> -->
+    <div id="home-cover" class="bg-parallax animated fadeIn">
+    <!-- <div id="home-cover" class="bg-parallax animated fadeIn"> -->
+      <div id="home-content-box"  style="padding-top: 10%; padding-bottom: 10%;">
+        <div id="home-content-box-inner">
+          <div id="home-heading" class="animated bounceInLeft">
+             <h3>My Own Django Template</h3>
+             <h6>Please Add Stuff Here</h6>
+             <h6>Leading the way to create Django Apps Easily</h6>
+          </div>
+          <br />
+          <div class="more">
+            <a href="#about"> Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Basic Django Template</title>
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous"> -->
+
+    <!-- Page Title -->
+    <title>Templater</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  	<link href="https://fonts.googleapis.com/css?family=Sonsie+One" rel="stylesheet">
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="{% static 'TemplateApp/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'TemplateApp/css/bootstrap/bootstrap.min.css' %}">
+
+
+    <script type="text/javascript" src="{% static 'TemplateApp/js/jquery/jquery.js' %}"></script>
+
+    <script type="text/javascript" src="{% static 'TemplateApp/js/custom.js' %}"></script>
+
+  </head>
+  <body>
+
+    <!-- Header Area Starts -->
+    <header>
+  		 <nav class="navbar demo-top-nav navbar-fixed-top" role="navigation">
+  		 	<div class="container-fluid">
+  		 		<div class="demo-nav-wrapper">
+  		 			<div class="navbar-header" align="left">
+  		 				<a class="navbar-brand" href="{% url 'index' %}">
+  		 					This is My Template
+  		 				</a>
+  		 			</div>
+  		 		</div>
+  		 	</div>
+  		 </nav>
+  	</header>
+    <!-- Header Area End -->
+
+    <div class="">
+    <!-- <div class="container"> -->
+      {% block body_block %}
+      {% endblock %}
+    </div>
+
+
+  </body>
+</html>
